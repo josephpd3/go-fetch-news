@@ -1,1 +1,1 @@
-# article_scraper_go
+# go-fetch-news
