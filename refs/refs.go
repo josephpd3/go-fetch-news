@@ -9,13 +9,14 @@ import (
 
 // Reference refers to a link within an article and its context (containing paragraph or sentence)
 type Reference struct {
+	Source  string
 	Href    string
 	Text    string
 	Context string
 }
 
 func (r Reference) String() string {
-	return fmt.Sprintf("Reference{ Href: '%v', Text: '%v', Context: '%v'}", r.Href, r.Text, r.Context)
+	return fmt.Sprintf("Reference{ Source: '%v', Href: '%v', Text: '%v', Context: '%v'}", r.Source, r.Href, r.Text, r.Context)
 }
 
 // GQChannelAndCallback wraps an output channel and a callback for use in GoQuery selections
